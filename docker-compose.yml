@@ -1,0 +1,29 @@
+version: "3"
+services:
+  mysql:
+    container_name: mysql
+    image: mimemysql:v1
+    hostname: mysql
+    ports:
+    - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: 123456
+    volumes:
+    - ./mysql/mysql_data:/var/lib/mysql
+    - ./mysql/mysql_db.cnf:/etc/mysql/conf.d/mysql_db.cnf
+    expose:
+    - "3306"
+  java:
+    container_name: java
+    image: myjava:v1
+    hostname: default
+    depends_on:
+      - mysql
+    environment:
+       USERNAME: root
+       PASSWORD: 123456
+       IP: mysql
+       DBNAME: "sakila"
+       PORT: "3306"
+       COUNTRYID: 87
+       CUSTOMERID: 87

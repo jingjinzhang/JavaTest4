@@ -1,0 +1,6 @@
+com\hand\api\service\impl\FilmServiceImpl.class
+com\hand\api\service\FilmService.class
+com\hand\infra\config\JDBCConfig.class
+com\hand\infra\mapper\FilmMapper.class
+com\hand\Application.class
+com\hand\infra\config\PublishString.class
