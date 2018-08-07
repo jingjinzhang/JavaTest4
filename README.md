@@ -1,2 +1,3 @@
-1. ./build.sh
-2. ./start.sh   
+1. cd JavaTest4
+2. ./build.sh
+3. ./start.sh   
